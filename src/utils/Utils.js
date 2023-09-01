@@ -4,8 +4,8 @@ import LogoSantaIzabel from "../images/logo-santa-izabel.png";
 import LogoSepaco from "../images/logo-sepaco.png";
 import LogoDark from "../images/logo-dark.png";
 
-export const apiUrl = () => {
-  return "http://144.22.192.180:4001/webhook";
+export const apiUrl = (porta) => {
+  return `http://144.22.192.180:${porta}/webhook`;
 };
 
 export const getHospital = (hospital) => {
@@ -46,6 +46,19 @@ export const getLogoHospital = (hospital) => {
         return LogoSepaco;
       default:
         return LogoDark;
+    }
+};
+
+export const getPortaHospital = (hospital) => {
+    switch(hospital){ 
+      case 'sabara':
+        return 4001;
+      case 'santacatarina':
+        return 4002;
+      case 'santaizabel':
+        return 4003;
+      case 'sepaco':
+        return 4004;
     }
 };
 

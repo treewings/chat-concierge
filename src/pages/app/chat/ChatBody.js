@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import SimpleBar from "simplebar-react";
 import { Button, Icon, UserAvatar } from "../../../components/Component";
-import { currentTime, findUpper, getHospital, getNomeHospital, apiUrl, truncate } from "../../../utils/Utils";
+import { currentTime, findUpper, getHospital, getNomeHospital, getPortaHospital, apiUrl, truncate } from "../../../utils/Utils";
 // import { ChatContext } from "./ChatContext";
 import { useParams } from "react-router-dom";
 
@@ -79,7 +79,7 @@ const ChatBody = ({ id, mobileView, setMobileView, setSelectedId }) => {
 
     const telefone = localStorage.getItem("telefone");
 
-    const response = await axios.get(`${apiUrl()}/${getHospital(params.hospital)}?numero=${telefone}&message=${inputText}`);
+    const response = await axios.get(`${apiUrl(getPortaHospital(params.hospital))}/${getHospital(params.hospital)}?numero=${telefone}&message=${inputText}`);
 
     let allChat = chat;
     let index = allChat.find((item) => item.id === id);
