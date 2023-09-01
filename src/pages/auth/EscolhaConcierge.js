@@ -22,22 +22,22 @@ import AuthFooter from "./AuthFooter";
 const EscolhaConcierge = () => {
     const route = useParams();
     const navigate = useNavigate();
-    console.log(route.hospital)
+
     // navigate(`/${route.hospital}/chat`)
     function WhatsApp() {
-        if (route.hospital === 'sabara') {
+        if (route.hospital === '36980') {
             const url = `https://api.whatsapp.com/send?phone=551150394040`
             window.open(url, '_blank');
         }
-        if (route.hospital === 'santacatarina') {
+        if (route.hospital === '32729') {
             const url = `https://api.whatsapp.com/send?phone=551149490104`
             window.open(url, '_blank');
         }
-        if (route.hospital === 'santaizabel') {
+        if (route.hospital === '35157') {
             const url = `https://api.whatsapp.com/send?phone=557140422222`
             window.open(url, '_blank');
         }
-        if (route.hospital === 'sepaco') {
+        if (route.hospital === '36380') {
             const url = `https://api.whatsapp.com/send?phone=551142000330`
             window.open(url, '_blank');
         }
@@ -57,16 +57,16 @@ const EscolhaConcierge = () => {
     const esconderChatWebSantaCatarina = 'N'
 
     let mostrarWhats = false
-    if (route.hospital === 'sabara' && esconderWhatsSabara === 'N') { mostrarWhats = true }
-    if (route.hospital === 'sepaco' && esconderWhatsSepaco === 'N') { mostrarWhats = true }
-    if (route.hospital === 'santaizabel' && esconderWhatsSantaIzabel === 'N') { mostrarWhats = true }
-    if (route.hospital === 'santacatarina' && esconderWhatsSantaCatarina === 'N') { mostrarWhats = true }
+    if (route.hospital === '36980' && esconderWhatsSabara === 'N') { mostrarWhats = true }
+    if (route.hospital === '36380' && esconderWhatsSepaco === 'N') { mostrarWhats = true }
+    if (route.hospital === '35157' && esconderWhatsSantaIzabel === 'N') { mostrarWhats = true }
+    if (route.hospital === '32729' && esconderWhatsSantaCatarina === 'N') { mostrarWhats = true }
 
     let mostrarChatWeb = false
-    if (route.hospital === 'sabara' && esconderChatWebSabara === 'N') { mostrarChatWeb = true }
-    if (route.hospital === 'sepaco' && esconderChatWebSepaco === 'N') { mostrarChatWeb = true }
-    if (route.hospital === 'santaizabel' && esconderChatWebSantaIzabel === 'N') { mostrarChatWeb = true }
-    if (route.hospital === 'santacatarina' && esconderChatWebSantaCatarina === 'N') { mostrarChatWeb = true }
+    if (route.hospital === '36980' && esconderChatWebSabara === 'N') { mostrarChatWeb = true }
+    if (route.hospital === '36380' && esconderChatWebSepaco === 'N') { mostrarChatWeb = true }
+    if (route.hospital === '35157' && esconderChatWebSantaIzabel === 'N') { mostrarChatWeb = true }
+    if (route.hospital === '32729' && esconderChatWebSantaCatarina === 'N') { mostrarChatWeb = true }
 
     return (
         <>
