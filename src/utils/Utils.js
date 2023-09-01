@@ -5,44 +5,57 @@ import LogoSepaco from "../images/logo-sepaco.png";
 import LogoDark from "../images/logo-dark.png";
 
 export const apiUrl = (porta) => {
-  return `http://144.22.192.180:${porta}/webhook`;
+  return `http://conciergedigital.3wings.com.br:${porta}/webhook`;
+};
+
+export const getAliasHospital = (codigo) => {
+  switch(codigo){
+    case '36980':
+      return 'sabara';
+    case '32729':
+      return 'santacatarina';
+    case '35157':
+      return 'santaizabel';
+    case '36380':
+      return 'sepaco';
+  }
 };
 
 export const getHospital = (hospital) => {
   switch(hospital){
-    case 'sabara':
+    case '36980':
       return 6;
-    case 'santacatarina':
+    case '32729':
       return 2;
-    case 'santaizabel':
+    case '35157':
       return 4;
-    case 'sepaco':
+    case '36380':
       return 6;
   }
 };
 
 export const getNomeHospital = (hospital) => {
     switch(hospital){
-      case 'sabara':
+      case '36980':
         return 'Hospital Sabará';
-      case 'santacatarina':
+      case '32729':
         return 'Hospital Santa Catarina';
-      case 'santaizabel':
+      case '35157':
         return 'Hospital Santa Izabel';
-      case 'sepaco':
+      case '36380':
         return 'Hospital Sepaco';
     }
 };
 
 export const getLogoHospital = (hospital) => {
     switch(hospital){
-      case 'sabara':
+      case '36980':
         return LogoSabara;
-      case 'santacatarina':
+      case '32729':
         return LogoSantaCatarina;
-      case 'santaizabel':
+      case '35157':
         return LogoSantaIzabel;
-      case 'sepaco':
+      case '36380':
         return LogoSepaco;
       default:
         return LogoDark;
@@ -50,14 +63,14 @@ export const getLogoHospital = (hospital) => {
 };
 
 export const getPortaHospital = (hospital) => {
-    switch(hospital){ 
-      case 'sabara':
+    switch(hospital){
+      case '36980':
         return 4001;
-      case 'santacatarina':
+      case '32729':
         return 4002;
-      case 'santaizabel':
+      case '35157':
         return 4003;
-      case 'sepaco':
+      case '36380':
         return 4004;
     }
 };
