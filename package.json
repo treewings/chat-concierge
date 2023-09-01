@@ -1,7 +1,7 @@
 {
   "name": "Concierge",
   "homepage": "/",
-  "version": "1.6.2",
+  "version": "1.7",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",

@@ -5,6 +5,7 @@ import Error404Modern from "../pages/error/404-modern"
 import Chat from "../pages/app/chat/ChatContainer";
 
 import Login from "../pages/auth/Login";
+import EscolhaConcierge from "../pages/auth/EscolhaConcierge";
 
 const Router = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const Router = () => {
   return (
     <Routes>
       <Route path=":hospital/login" element={<Login />}></Route>
+      <Route path=":hospital/" element={<EscolhaConcierge />}></Route>
 
       {telefone? (
         <Route path=":hospital/chat" element={<Chat />}></Route>
